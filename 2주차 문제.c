@@ -56,7 +56,7 @@ int main()
     
     for(int i=0; i<num; i++){
         if(ip[i]-pm[i]<=2){
-            printf("상품 ID %d : 재고부족 %d\n", i+1, ip[i]-pm[i]);
+            printf("상품 ID %d : 재고부족 (%d)\n", i+1, ip[i]-pm[i]);
         }
     }
     
