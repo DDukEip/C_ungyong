@@ -47,7 +47,7 @@ int main()
         stuffInfo();
     }
     
-    printf("\n[쇼핑몰 관리 프로그램]\n");
+    //printf("\n[쇼핑몰 관리 프로그램]\n");
     printf("> 원하는 메뉴를 선택하세요.(1. 입고, 2. 판매, 3. 상품현황, 4. 종료)\n");
     printf("> ");
     scanf("%d", &select);
