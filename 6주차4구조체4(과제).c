@@ -1,17 +1,17 @@
 #include <stdio.h>
 #include <math.h>
 
-typedef struct point{ //Á¡ 
+typedef struct point{ //ì  
 	int x;
 	int y;
 } POINT;
 
-typedef struct{ //¿ø typedef »ç¿ë½Ã ÀÌ¸§ ¾ø¾îµµ ¤¡¤º 
-	POINT center; //¿ø Áß½É 
+typedef struct{ //ì› typedef ì‚¬ìš©ì‹œ ì´ë¦„ ì—†ì–´ë„ ã„±ã…Š 
+	POINT center; //ì› ì¤‘ì‹¬ 
 	double radius;
 } CIRCLE;
 
-typedef struct rect{ //»ç°¢Çü 
+typedef struct rect{ //ì‚¬ê°í˜• 
 	POINT lb;
 	POINT rt;
 }RECT;
@@ -39,10 +39,10 @@ int main(){
 
 	distance = dist(c2.center, point);
 	if(distance <= c2.radius){
-		printf("¿ø ¾È¿¡ ÀÖ½À´Ï´Ù.\n");
+		printf("ì› ì•ˆì— ìˆìŠµë‹ˆë‹¤.\n");
 	}
 	else{
-		printf("¿ø ¹Û¿¡ ÀÖ½À´Ï´Ù.\n");
+		printf("ì› ë°–ì— ìˆìŠµë‹ˆë‹¤.\n");
 	}
 	
 	return 0;
