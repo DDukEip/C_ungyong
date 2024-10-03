@@ -6,12 +6,12 @@ typedef struct point{
 	int y;
 } POINT;
 
-typedef struct{ //typedef »ç¿ë½Ã ÀÌ¸§ ¾ø¾îµµ ¤¡¤º 
-	POINT center; //¿ø Áß½É 
+typedef struct{ //typedef ì‚¬ìš©ì‹œ ì´ë¦„ ì—†ì–´ë„ ã„±ã…Š 
+	POINT center; //ì› ì¤‘ì‹¬ 
 	double radius;
 } CIRCLE;
 
-typedef struct rect{ //»ç°¢Çü 
+typedef struct rect{ //ì‚¬ê°í˜• 
 	POINT lb;
 	POINT rt;
 }RECT;
