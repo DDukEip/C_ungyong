@@ -25,13 +25,13 @@ int main()
     char names[num][101];   
     
     int select = 6;
-    printf("[¼îÇÎ¸ô °ü¸® ÇÁ·Î±×·¥]\n");
-    printf("> ¿øÇÏ´Â¸Ş´º¸¦¼±ÅÃÇÏ¼¼¿ä.(1.ÀÔ°í,2.ÆÇ¸Å,3.»óÇ°ÇöÈ².4.»óÇ°¸íÀÔ·Â,5.Á¾·á)\n");
+    printf("[ì‡¼í•‘ëª° ê´€ë¦¬ í”„ë¡œê·¸ë¨]\n");
+    printf("> ì›í•˜ëŠ”ë©”ë‰´ë¥¼ì„ íƒí•˜ì„¸ìš”.(1.ì…ê³ ,2.íŒë§¤,3.ìƒí’ˆí˜„í™©.4.ìƒí’ˆëª…ì…ë ¥,5.ì¢…ë£Œ)\n");
     printf(">");
     while(select<0||select>5){
         scanf("%d", &select);
         if(select<0||select>5){
-            printf("\nÀß¸øµÈ °ªÀÔ´Ï´Ù.\n");
+            printf("\nì˜ëª»ëœ ê°’ì…ë‹ˆë‹¤.\n");
         }
     }
     
@@ -51,54 +51,54 @@ int main()
         getName(names);
     }
     
-    //printf("\n[¼îÇÎ¸ô °ü¸® ÇÁ·Î±×·¥]\n");
-    printf("> ¿øÇÏ´Â¸Ş´º¸¦¼±ÅÃÇÏ¼¼¿ä.(1.ÀÔ°í,2.ÆÇ¸Å,3.»óÇ°ÇöÈ².4.»óÇ°¸íÀÔ·Â,5.Á¾·á)\n");
+    //printf("\n[ì‡¼í•‘ëª° ê´€ë¦¬ í”„ë¡œê·¸ë¨]\n");
+    printf("> ì›í•˜ëŠ”ë©”ë‰´ë¥¼ì„ íƒí•˜ì„¸ìš”.(1.ì…ê³ ,2.íŒë§¤,3.ìƒí’ˆí˜„í™©.4.ìƒí’ˆëª…ì…ë ¥,5.ì¢…ë£Œ)\n");
     printf("> ");
     scanf("%d", &select);
     
     if(select<0||select>5){
-        printf("\nÀß¸øµÈ °ªÀÔ´Ï´Ù.\n");
+        printf("\nì˜ëª»ëœ ê°’ì…ë‹ˆë‹¤.\n");
     }
     
     }
     return 0;
 }
 
-void ipgo(int* ip ,int *pm){ //ÀÔ°í
+void ipgo(int* ip ,int *pm){ //ì…ê³ 
     int select_Ipgo = 0;
     int aa,bb;
     int getIp;
-    printf("\n> ÀÔ°í¼ö·® ÀÔ·Â : ÀüÃ¼ »óÇ° ÀÔ°í¼ö·® ÀÔ·Â 1, °³º° »óÇ° ÀÔ·Â 2¸¦ ¼±ÅÃ\n");
+    printf("\n> ì…ê³ ìˆ˜ëŸ‰ ì…ë ¥ : ì „ì²´ ìƒí’ˆ ì…ê³ ìˆ˜ëŸ‰ ì…ë ¥ 1, ê°œë³„ ìƒí’ˆ ì…ë ¥ 2ë¥¼ ì„ íƒ\n");
     scanf("%d", &select_Ipgo);
-    if(select_Ipgo == 1){//1¹ø ¼±ÅÃ½Ã
-        printf("\n> ÀüÃ¼ »óÇ° %d °³ÀÇ ÀÔ°í¼ö·®À» ÀÔ·ÂÇØÁÖ¼¼¿ä\n", num);
-        for(int i=0; i<num; i++ ){ //ÀÔ°í ¹Ş±â
+    if(select_Ipgo == 1){//1ë²ˆ ì„ íƒì‹œ
+        printf("\n> ì „ì²´ ìƒí’ˆ %d ê°œì˜ ì…ê³ ìˆ˜ëŸ‰ì„ ì…ë ¥í•´ì£¼ì„¸ìš”\n", num);
+        for(int i=0; i<num; i++ ){ //ì…ê³  ë°›ê¸°
             scanf("%d", &getIp);
             *(ip+i) = getIp;
         }
     }
-    else if(select_Ipgo == 2){ //2¹ø ¼±ÅÃ½Ã
-        printf("\n»óÇ°ID :");
+    else if(select_Ipgo == 2){ //2ë²ˆ ì„ íƒì‹œ
+        printf("\nìƒí’ˆID :");
         scanf("%d", &aa);
-        printf("\nÀÔ°í¼ö·® :");
+        printf("\nì…ê³ ìˆ˜ëŸ‰ :");
         scanf("%d", &bb);
         *(ip+aa-1) = bb;
     }
-} //ÀÔ°í
+} //ì…ê³ 
 
-void panmae(int* ip ,int *pm){ //ÆÇ¸Å
+void panmae(int* ip ,int *pm){ //íŒë§¤
     int select_Panmae = 0;
     int aa=0,bb=0;
     int getPm;
-    printf("\n> ÆÇ¸Å¼ö·® ÀÔ·Â : ÀüÃ¼ »óÇ° ÆÇ¸Å¼ö·® ÀÔ·Â 1, °³º° »óÇ° ÀÔ·Â 2¸¦ ¼±ÅÃ\n");
+    printf("\n> íŒë§¤ìˆ˜ëŸ‰ ì…ë ¥ : ì „ì²´ ìƒí’ˆ íŒë§¤ìˆ˜ëŸ‰ ì…ë ¥ 1, ê°œë³„ ìƒí’ˆ ì…ë ¥ 2ë¥¼ ì„ íƒ\n");
     scanf("%d", &select_Panmae);
     if(select_Panmae == 1){
-        printf("\n> ÀüÃ¼ »óÇ° %d °³ÀÇ ÆÇ¸Å¼ö·®À» ÀÔ·ÂÇØÁÖ¼¼¿ä\n", num);
-        for(int i=0; i<num; i++ ){ // ÆÇ¸Å ¹Ş±â
+        printf("\n> ì „ì²´ ìƒí’ˆ %d ê°œì˜ íŒë§¤ìˆ˜ëŸ‰ì„ ì…ë ¥í•´ì£¼ì„¸ìš”\n", num);
+        for(int i=0; i<num; i++ ){ // íŒë§¤ ë°›ê¸°
             scanf("%d", &getPm);
             *(pm+i) = getPm;
         /*    if((ip[i]-pm[i])<0){
-                printf("\nÇØ´ç »óÇ°ÀÌ ºÎÁ·ÇØ ÆÇ¸Å ÇÒ ¼ö ¾ø½À´Ï´Ù.");
+                printf("\ní•´ë‹¹ ìƒí’ˆì´ ë¶€ì¡±í•´ íŒë§¤ í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
                 
             }
             else{
@@ -107,29 +107,29 @@ void panmae(int* ip ,int *pm){ //ÆÇ¸Å
         }
     }
     else if(select_Panmae == 2){
-        printf("\n»óÇ°ID :");
+        printf("\nìƒí’ˆID :");
         scanf("%d", &aa);
-        printf("\nÆÇ¸Å¼ö·® :");
+        printf("\níŒë§¤ìˆ˜ëŸ‰ :");
         scanf("%d", &bb);
         if((*(ip+aa-1)-(*(pm+aa-1)+bb))<0){
-            printf("\nÇØ´ç »óÇ°ÀÌ ºÎÁ·ÇØ ÆÇ¸Å ÇÒ ¼ö ¾ø½À´Ï´Ù.");
+            printf("\ní•´ë‹¹ ìƒí’ˆì´ ë¶€ì¡±í•´ íŒë§¤ í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
         }
         else{
             *(pm+aa-1)=bb;
         }
     }
-} //ÆÇ¸Å
+} //íŒë§¤
 
-void stuffInfo(int* ip ,int *pm, char (*names)[101]){//»óÇ°ÇöÈ²
+void stuffInfo(int* ip ,int *pm, char (*names)[101]){//ìƒí’ˆí˜„í™©
     int max = 0, min = 1001010;
     float ipSum = 0;
     float pmSum = 0;
     int maxId, minId;
     
     for(int i=0; i<num; i++){
-        ipSum += ip[i]; //ÃÑ ÀÔ°í °³¼ö ÀúÀå
-        pmSum += pm[i]; // ÃÑ ÆÇ¸Å °³¼ö ÀúÀå
-        if(*(ip+i)>max){ //ÃÖ¼Ò ÃÖ´ë ÆÇ¸Å ±¸ÇÏ±â
+        ipSum += ip[i]; //ì´ ì…ê³  ê°œìˆ˜ ì €ì¥
+        pmSum += pm[i]; // ì´ íŒë§¤ ê°œìˆ˜ ì €ì¥
+        if(*(ip+i)>max){ //ìµœì†Œ ìµœëŒ€ íŒë§¤ êµ¬í•˜ê¸°
             maxId = i+1;
             max = *(ip+i);
         }
@@ -138,34 +138,34 @@ void stuffInfo(int* ip ,int *pm, char (*names)[101]){//»óÇ°ÇöÈ²
             min = *(pm+i);
         }
     }
-    printf("\nÀç°í ¼ö·® : ");
+    printf("\nì¬ê³  ìˆ˜ëŸ‰ : ");
     for(int i=0; i<num; i++ ){
         printf("%d ", *(ip+i)-*(pm+i));
     }
     
     float pmSumPer = pmSum/ipSum * 100.0; 
     
-    printf("\nÃÑ ÆÇ¸Å·® : %.0f (ÆÇ¸ÅÀ² %.2f%%)\n",pmSum ,pmSumPer);
+    printf("\nì´ íŒë§¤ëŸ‰ : %.0f (íŒë§¤ìœ¨ %.2f%%)\n",pmSum ,pmSumPer);
     for(int i=0; i<num; i++){
         if(max == *(ip+i)){
-            printf("°¡Àå ¸¹ÀÌ ÆÇ¸ÅµÈ »óÇ° : ID %d, »óÇ°¸í : %s ÆÇ¸Å·® %d\n",i+1 ,(char*)names[i] ,max );
+            printf("ê°€ì¥ ë§ì´ íŒë§¤ëœ ìƒí’ˆ : ID %d, ìƒí’ˆëª… : %s íŒë§¤ëŸ‰ %d\n",i+1 ,(char*)names[i] ,max );
         }
     }
     for(int i=0; i<num; i++){
         if(min == *(pm+i)){
-            printf("°¡Àå Àû°Ô ÆÇ¸ÅµÈ »óÇ° : ID %d, »óÇ°¸í : %s ÆÇ¸Å·® %d\n",i+1 ,(char*)names[i] ,min );
+            printf("ê°€ì¥ ì ê²Œ íŒë§¤ëœ ìƒí’ˆ : ID %d, ìƒí’ˆëª… : %s íŒë§¤ëŸ‰ %d\n",i+1 ,(char*)names[i] ,min );
         }
     }
     for(int i=0; i<num; i++){
         if(*(ip+i)-*(pm+i)<=2){
-            printf("»óÇ° ID %d : Àç°íºÎÁ·(%d)\n", i+1, *(ip+i)-*(pm+i));
+            printf("ìƒí’ˆ ID %d : ì¬ê³ ë¶€ì¡±(%d)\n", i+1, *(ip+i)-*(pm+i));
         }
     }
 }
 
 void getName(char (*names)[101]){
     for(int i=0; i<num; i++){
-        printf("\nID %d »óÇ°¸í : ", i+1);
+        printf("\nID %d ìƒí’ˆëª… : ", i+1);
         scanf("%s", (char*)names[i] );
     }
 }
